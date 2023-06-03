@@ -1,3 +1,30 @@
-img {
-    width: 30%;
+img, button {
+    width: 25%;
+    margin: 1rem;
+}
+
+button {
+    background-color: rgb(81, 137, 216);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 2rem;
+}
+
+.outfit-generator {
+    display: flex;
+    flex-direction: column;
+}
+
+.outfit-buttons-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.outfit-images-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(81, 137, 216);
 }

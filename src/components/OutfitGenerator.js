@@ -8,8 +8,6 @@ const OutfitGenerator = () => {
 
     const [outfit, setOutfit] = useState(initialState);
 
-    //Math.floor(<yourArray>.length * Math.random())
-
     const outfitHandler = (style) => {
         let topArray = clothing.filter((element)=>{
             return element.dressCode === style && element.type === "top";
@@ -28,23 +26,25 @@ const OutfitGenerator = () => {
         
     }
 
-
     return (
-        <div>
+        <div className="outfit-generator">
 
-            <h1>
-                OutfitGenerator
-            </h1>
+            <h3>
+                Fashion Styles // Dress Code
+            </h3>
 
-            <div>
+            <div className="outfit-buttons-container">
                 <button onClick={() => outfitHandler('casual')}>Casual</button>
                 <button onClick={() => outfitHandler('sport')}>Sport</button>
                 <button onClick={() => outfitHandler('formal')}>Formal</button>
             </div>
 
-            <div>
+            <div className="outfit-images-container">
+                <h4>TOP</h4>
                 <img src={outfit[0]} alt="top" />
+                <h4>BOTTOM</h4>
                 <img src={outfit[1]} alt="bottom" />
+                <h4>FORMAL</h4>
                 <img src={outfit[2]} alt="shoes" />
             </div>
 
